@@ -1,5 +1,13 @@
 {
   "x_bearer_token": "YOUR-BEARER-TOKEN-HERE",
   "default_days": 7,
-  "max_results": 20
+  "max_results": 20,
+  "author_list": [
+    "[AUTHOR_1]",
+    "[AUTHOR_2]"
+  ],
+  "email_list": [
+    "[EMAIL_ADDRESS]",
+    "[EMAIL_ADDRESS]"
+  ]
 }

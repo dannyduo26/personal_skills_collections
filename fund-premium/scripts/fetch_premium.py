@@ -165,7 +165,9 @@ def filter_funds(funds, threshold=2.0, all_status=False):
             continue
         seen_codes.add(code)
         
-        premium_str = str(f.get("discount_rt", ""))
+        # 实时溢价率无法获取了（discount_rt字段）
+        # 获取T-2净值溢价率（nav_discount_rt字段）
+        premium_str = str(f.get("nav_discount_rt", ""))
         premium = _to_float_percent(premium_str)
         
         status = str(f.get("apply_status", ""))
