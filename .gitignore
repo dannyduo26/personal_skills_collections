@@ -2,4 +2,4 @@
 config.json
 .env
 /.vscode
-zsxq-daily-dynamics/scripts/__pycache__/fetch_today_dynamics.cpython-312.pyc
+__pycache__
