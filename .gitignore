@@ -1,3 +1,5 @@
-serverchan-notify/config.json
-x-twitter-search/config.json
-fund-premium/scripts/config.json
+# 忽略所有的 config.json
+config.json
+.env
+/.vscode
+zsxq-daily-dynamics/scripts/__pycache__/fetch_today_dynamics.cpython-312.pyc
