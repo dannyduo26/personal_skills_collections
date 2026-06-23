@@ -1,0 +1,8 @@
+{
+  "corpid": "YOUR_CORP_ID",
+  "corpsecret": "YOUR_CORP_SECRET",
+  "agentid": "YOUR_AGENT_ID",
+  "touser": "@all",
+  "callback_token": "YOUR_CALLBACK_TOKEN",
+  "encoding_aes_key": "YOUR_ENCODING_AES_KEY"
+}

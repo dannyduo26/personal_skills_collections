@@ -1,0 +1,40 @@
+# 有效的 YAML 配置；脚本没有 PyYAML 时也能解析这个子集。
+sources:
+  eastmoney:
+    enabled: true
+    page_size: 50
+    max_pages: 3
+    categories: [stock, industry, macro]
+    api_url: https://reportapi.eastmoney.com/report/list
+    pages:
+      stock: https://data.eastmoney.com/report/stock.jshtml
+      industry: https://data.eastmoney.com/report/industry.jshtml
+      macro: https://data.eastmoney.com/report/macresearch.jshtml
+    q_types:
+      stock: 0
+      industry: 1
+      macro: 3
+
+filters:
+  # 留空表示不过滤券商；示例：[中信证券, 华泰证券]
+  broker_allowlist: []
+  # 留空表示不过滤关键词；命中标题、券商或主题即可保留。
+  keyword_allowlist: []
+  # 命中标题或主题会跳过。
+  keyword_blocklist: []
+  max_items_per_category: 20
+  max_total_items: 60
+
+storage:
+  sqlite_path: data/reports.sqlite
+  log_path: logs/daily-broker-reports.log
+
+notification:
+  provider: wework
+  webhook_env: WEWORK_BOT_WEBHOOK
+  secret_env: WEWORK_BOT_SECRET
+  notify_empty: false
+  # true 表示按个股、行业、宏观拆成多条企业微信消息。
+  group_by_category: true
+  message_interval_seconds: 1
+  max_markdown_chars: 3800

@@ -1,0 +1,6 @@
+scrapling==0.4.3
+html2text==2025.4.15
+curl_cffi==0.14.0
+browserforge==1.2.4
+patchright==1.58.2
+msgspec==0.18.6

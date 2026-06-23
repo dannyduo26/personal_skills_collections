@@ -1,0 +1,4 @@
+interface:
+  display_name: "Finance Research Report"
+  short_description: "Collect daily broker research reports and send WeCom summaries."
+  default_prompt: "Collect today's broker research reports and send a WeCom summary."
